@@ -1,1 +1,31 @@
-草了，这个github
+1. 登录github并创建一个仓库
+
+2. 安装git客户端
+	2.1 下载git
+		官网：git-scm.com/download/
+		镜像：https://npm.taobao.org/mirrors/git-for-windows/?utm_source=qq&utm_medium=social&utm_oi=793691189428776960
+	2.2 安装git
+	2.3 绑定用户
+		git config --global user.name xiaoMin
+		git config --global user.email xiaoMin@gmail.com
+
+3. 设置ssh密钥
+	3.1 生成ssh
+		cd ~/.ssh
+		ls
+		找到.pub结尾的文件
+			3.1.1 如果没有生成 ssh-keygen -t rsa -C xiaoMin@gmail.com
+	3.2 为github配置ssh密钥
+		settings - SSH and GPG keys
+
+4. 上传项目到github
+	4.1 创建本地项目
+	4.2 执行指令
+		git init 
+		git add .
+		git commit -m update
+
+	4.3 关联github仓库
+		git remote add origin git@github.com:547343578/xxx.git
+	4.4 上传本地代码
+		git push -u origin master
