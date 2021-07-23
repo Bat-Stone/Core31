@@ -1,0 +1,102 @@
+﻿@*@using MVCX1.Models*@
+@*@model MVCX1.Models.Players*@
+@*@model MVCX1.ViewModels.PlayerExpand*@
+@model IEnumerable<MVCX1.Models.Players>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @*@{
+            var player = ViewData["score"] as Players;
+        }
+        @ViewData["PageTitle"]
+        <table border="1" bordercolor="black" width="300" cellspacing="0" cellpadding="5">
+            <tr>
+                <td colspan="2">@player.Name</td>
+            </tr>
+            <tr>
+                <td>@player.Shoot</td>
+                <td>@player.Dribble</td>
+            </tr>
+            <tr>
+                <td>@player.Passing</td>
+                <td>@player.Defence</td>
+            </tr>
+        </table>*@
+
+    @*<p style="color:gold;width:100px;height:50px">@ViewBag.TitleX</p>
+        <table border="1" bordercolor="black" width="500" cellspacing="0" cellpadding="5">
+            <tr>
+                <td colspan="2" align="center">@ViewBag.DataX.Name</td>
+            </tr>
+            <tr>
+                <td>@ViewBag.DataX.Shoot</td>
+                <td>@ViewBag.DataX.Dribble</td>
+            </tr>
+            <tr>
+                <td>@ViewBag.DataX.Passing</td>
+                <td>@ViewBag.DataX.Defence</td>
+            </tr>
+        </table>*@
+
+    @*强类型调用*@
+    @*<p style="color:gold;width:100px;height:50px">GOAT</p>
+        <table border="1" bordercolor="black" width="500" cellspacing="0" cellpadding="5">
+            <tr>
+                <td colspan="2" align="center">@Model.Name</td>
+            </tr>
+            <tr>
+                <td>@Model.Shoot</td>
+                <td>@Model.Dribble</td>
+            </tr>
+            <tr>
+                <td>@Model.Passing</td>
+                <td>@Model.Defence</td>
+            </tr>
+        </table>*@
+
+    @*viewmodel*@
+    @*<p style="color:gold;width:100px;height:50px">@Model.GOAT</p>
+        <table border="1" bordercolor="black" width="500" cellspacing="0" cellpadding="5">
+            <tr>
+                <td colspan="2" align="center">@Model.barca.Name</td>
+            </tr>
+            <tr>
+                <td>@Model.barca.Shoot</td>
+                <td>@Model.barca.Dribble</td>
+            </tr>
+            <tr>
+                <td>@Model.barca.Passing</td>
+                <td>@Model.barca.Defence</td>
+            </tr>
+        </table>*@
+
+    @*IEnumerable类型*@
+    <table>
+            <tbody>
+                @foreach (var players in Model)
+                { 
+                <tr>
+                    <td>
+                        @players.Name
+                    </td>
+                    <td>
+                        @players.Shoot
+                    </td>
+                    <td>
+                        @players.Dribble
+                    </td>
+                    <td>
+                        @players.Passing
+                    </td>
+                    <td>
+                        @players.Defence
+                    </td>
+                </tr>
+                }
+                </tbody>
+        </table>
+
+</body>
+</html>

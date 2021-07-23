@@ -1,0 +1,26 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model MVCX1.Models.Players
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>@ViewBag.Title</p>
+    <form method="post" asp-controller="home" asp-action="AddFormX">
+        <label asp-for="Name">姓名</label>
+        <input asp-for="Name">
+        <br />
+        <label asp-for="Shoot">得分</label>
+        <input asp-for="Shoot">
+        <br />
+        <label asp-for="Dribble">盘带</label>
+        <input asp-for="Dribble">
+        <br />
+        <label asp-for="Passing">传球</label>
+        <input asp-for="Passing">
+        <br />
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>
